@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbital Ops | Round 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #020617;
+            --hud-cyan: #38bdf8;
+            --hud-purple: #818cf8;
+            --text-main: #e2e8f0;
+        }
+        body {
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.15), transparent 50%),
+                radial-gradient(circle at 50% 100%, rgba(129, 140, 248, 0.15), transparent 50%);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 2rem;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, var(--hud-cyan), var(--hud-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p.subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 4rem;
+            max-width: 600px;
+        }
+        .cards-container {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .mission-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 16px;
+            padding: 2.5rem;
+            width: 320px;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .mission-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--hud-cyan);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+            background: rgba(15, 23, 42, 0.8);
+        }
+        .mission-card h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--hud-cyan);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .mission-card p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .status-badge {
+            margin-top: 1.5rem;
+            background: rgba(74, 222, 128, 0.2);
+            color: #4ade80;
+            padding: 0.25rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Round 2: Orbital Ops</h1>
+    <p class="subtitle">Select your mission objective. Both systems are currently online and ready for deployment.</p>
+
+    <div class="cards-container">
+        <!-- ESA Atlas Mission -->
+        <a href="./esa-atlas/index.html" class="mission-card">
+            <h2>ESA Atlas</h2>
+            <p>Interactive real-time map of the European space network Headquarters (22 Members).</p>
+            <div class="status-badge">DEPLOYED</div>
+        </a>
+
+        <!-- Agent Persona Mission -->
+        <a href="./agent-persona/index.html" class="mission-card">
+            <h2>Agent Persona</h2>
+            <p>Autonomous crew member terminal. Connect to ANTIGRAVITY communication log.</p>
+            <div class="status-badge">DEPLOYED</div>
+        </a>
+    </div>
+</body>
+</html>
